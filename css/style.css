@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+/* font-family: 'Permanent Marker', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    border-right-color: rgb(14, 14, 14);
+}
+
+:root {
+    --width: calc(100% - 80px);
+    overflow: hidden;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: calc((100vh - (4 * 70px))/2) 0;
+}
+
+.logo {
+    position: relative;
+    width: 100%;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(199, 243, 237);
+}
+
+
+button {
+    display: block;
+    height: 70px;
+    width: 80px;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(199, 243, 237);
+    background-color: transparent;
+    border: none;
+    font-size: 35px;
+}
+
+button:hover {
+    background-color: rgb(17, 17, 17);
+}
+
+
+
+nav {
+    z-index: 0;
+    position: fixed;
+    width: 80px;
+    height: 100%;
+    background-color: rgb(37, 37, 37);
+
+}
+.header, .work, .hobby, .footer {
+    position: absolute;
+    height: 100%;
+    width: var(--width);
+    text-align: center;
+}
+
+.header {
+    right: 0;
+    top: 0;
+    background-color: rgb(42, 172, 128);
+}
+
+.work {
+    right: -100%;
+    top: 0;
+    background-color: rgb(55, 136, 9);
+}
+
+.hobby {
+    right: -100%;
+    top: 0;
+    background-color: rgb(197, 107, 47);
+}
+
+.footer {
+    right: -100%;
+    top: 0;
+    background-color: rgb(104, 28, 175);
+}
