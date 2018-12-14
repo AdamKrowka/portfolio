@@ -1,3 +1,6 @@
+
+
+
 function header() {
     var header = document.getElementById("header");
     var work = document.getElementById("work");
@@ -9,10 +12,10 @@ function header() {
     hobby.style.right = "-100%";
     footer.style.right = "-100%";
     
-    header.style.transition = "right 1s linear 0s";
-    work.style.transition = "right 0s linear 1s";
-    hobby.style.transition = "right 0s linear 1s";
-    footer.style.transition = "right 0s linear 1s";
+    header.style.transition = "right .8s linear 0s";
+    work.style.transition = "right 0s linear .8s";
+    hobby.style.transition = "right 0s linear .8s";
+    footer.style.transition = "right 0s linear .8s";
 
     header.style.zIndex = "1";
     work.style.zIndex = "0";
@@ -31,10 +34,10 @@ function work() {
     hobby.style.right = "-100%";
     footer.style.right = "-100%";
 
-    work.style.transition = "right 1s linear 0s";
-    header.style.transition = "right 0s linear 1s";
-    hobby.style.transition = "right 0s linear 1s";
-    footer.style.transition = "right 0s linear 1s";
+    work.style.transition = "right .8s linear 0s";
+    header.style.transition = "right 0s linear .8s";
+    hobby.style.transition = "right 0s linear .8s";
+    footer.style.transition = "right 0s linear .8s";
 
     work.style.zIndex = "1";
     header.style.zIndex = "0";
@@ -53,10 +56,10 @@ function hobby(){
     header.style.right = "-100%";
     footer.style.right = "-100%";
 
-    hobby.style.transition = "right 1s linear 0s";
-    work.style.transition = "right 0s linear 1s";
-    header.style.transition = "right 0s linear 1s";
-    footer.style.transition = "right 0s linear 1s";
+    hobby.style.transition = "right .8s linear 0s";
+    work.style.transition = "right 0s linear .8s";
+    header.style.transition = "right 0s linear .8s";
+    footer.style.transition = "right 0s linear .8s";
 
     hobby.style.zIndex = "1";
     work.style.zIndex = "0";
@@ -76,10 +79,10 @@ function footer(){
     header.style.right = "-100%";
     hobby.style.right = "-100%";
 
-    footer.style.transition = "right 1s linear 0s";
-    work.style.transition = "right 0s linear 1s";
-    header.style.transition = "right 0s linear 1s";
-    hobby.style.transition = "right 0s linear 1s";
+    footer.style.transition = "right .8s linear 0s";
+    work.style.transition = "right 0s linear .8s";
+    header.style.transition = "right 0s linear .8s";
+    hobby.style.transition = "right 0s linear .8s";
 
     footer.style.zIndex = "1";
     work.style.zIndex = "0";

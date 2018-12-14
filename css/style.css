@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Overlock&subset=latin-ext');
 /* font-family: 'Permanent Marker', cursive; */
+/* font-family: 'Overlock', cursive; */
 
 * {
     margin: 0;
@@ -42,13 +44,16 @@ button {
     background-color: transparent;
     border: none;
     font-size: 35px;
+    
 }
+button:focus{
+    outline: none;
+}
+
 
 button:hover {
     background-color: rgb(17, 17, 17);
 }
-
-
 
 nav {
     z-index: 0;
@@ -68,13 +73,42 @@ nav {
 .header {
     right: 0;
     top: 0;
-    background-color: rgb(42, 172, 128);
+    /* background-color: rgb(42, 172, 128); */
+    background-color: rgb(49, 49, 49);
 }
+
+.header h1 {
+    position: absolute;
+    left: 7%;
+    top: 7%;
+    width: 10%;
+    font-size: 80px;
+    font-family: 'Overlock', cursive;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+    text-shadow: 7px -5px 14px rgb(56, 56, 56);
+    
+
+}
+
+.header div{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+}
+
+
 
 .work {
     right: -100%;
     top: 0;
-    background-color: rgb(55, 136, 9);
+    /* background-color: rgb(55, 136, 9); */
+    background-color: rgb(45, 45, 45);
 }
 
 .hobby {
