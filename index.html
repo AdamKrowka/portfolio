@@ -6,50 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/icon.ico">
+    <link rel="Shortcut icon" href="icon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylemobile.css">
 </head>
 
 
 <body>
+        <nav>
+                <img class="logo" onclick="header()" src="img/favicon-96x96.png" alt="">
+                <ul>
+                    <li><button class="btnNav" onclick="header()"><i class="fas fa-home"></i></button></li>
+                    <li><button class="btnNav" onclick="work()"><i class="fas fa-code"></i></button></li>
+                    <li><button class="btnNav" onclick="hobby()"><i class="fas fa-guitar"></i></button></li>
+                    <li><button class="btnNav" onclick="footer()"><i class="fas fa-info"></i></button></li>
+                </ul>
+            </nav>
+
+         <div class="pozycja" id="slide"s>
+<div class="wrapper">
+            
     <header id="header" class="header">
         <div class="headPick">
             <h1> Portfolio Adam Krówka</h1>
         </div>
     </header>
 
-    <nav>
-        <p class="logo" onclick="header()">AK</p>
-        <ul>
-            <li><button class="btnNav" onclick="header()"><i class="fas fa-home"></i></button></li>
-            <li><button class="btnNav" onclick="work()"><i class="fas fa-code"></i></button></li>
-            <li><button class="btnNav" onclick="hobby()"><i class="fas fa-guitar"></i></button></li>
-            <li><button class="btnNav" onclick="footer()"><i class="fas fa-info"></i></button></li>
-        </ul>
-    </nav>
+   
     <main id="work" class="work">
         <h1 class="title">Jakie zdolności już posiadam</h1>
-        <article class="praca1">
+        <article class="praca1" id="praca1">
             <h1>Responsywność</h1>
             <p>Dbam o to aby strony które tworzę wyglądały świetnie na każdym urządzeniu. Nie ważne czy jest to ogromny monitor komputera czy mały ekran smartfona.
-                Znany mi jest bootstrap oraz potrafię zbudować responsywna stronę na zapytaniach "media".</p>
+                Znany mi jest bootstrap oraz potrafię zbudować responsywna stronę na zamytaniach "media".</p>
             <div class="obraz"></div>
         </article>
-        <article class="praca2">
+        <article class="praca2" id="praca2">
             <h1>JavaScript</h1>
-            <p>Na bieżąco uczę się pisać skrypty w JS, studjuję również JQuerry. Mam nadzieję, że jak wejdziecie na moją stronę będziecie zadowoleni z efektu mojej pracy.</p>
+            <p>Na bieżąco uczę się pisać skrypty w JS, studjuję równierz JQuerry. Mam nadzieję, że jak wejdziecie na moją stronę będziecie zadowoleni z efektu mojej pracy.</p>
             <div class="obraz"></div>
         </article>
-        <article class="praca3">
+        <article class="praca3" id="praca3">
             <h1>Najnowsze Standardy</h1>
-            <p>Jestem na bieżąco z aktualnymi stadndardami które powinnien znać każdy szanujący się Web-developer.</p>
+            <p>Jestem na bierząco z aktualnymi stadndardami które powinnien znać każdy szanujący się Web-developer.</p>
             <div class="obraz"></div>
         </article>       
     </main>
 
+
+
     <section id="hobby" class="hobby">
+        
+            <h1 class="title">Moje Hobby</h1>
         <div class="background">
             <div class="light">
                 <div class="images">
@@ -87,10 +97,11 @@
         </div>
 
         
-        <h1 class="title">Moje Hobby</h1>
         
         
     </section>
+
+   
 
     <footer id="footer" class="footer">
         <h1>
@@ -98,8 +109,10 @@
         </h1>
 
     </footer>
-
+</div>
+</div>
     <script src="js/script.js"></script>
+    <script src="js/javaslider.js"></script>
 </body>
 
 </html>
