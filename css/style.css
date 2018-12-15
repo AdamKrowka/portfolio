@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Charm:400,700&subset=latin-ext');
-/* font-family: 'Charm', cursive; */
-
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&subset=latin-ext');
+/* font-family: 'Titillium Web', sans-serif; */
 @media (orientation:landscape){
 
 * {
@@ -10,6 +8,7 @@
     box-sizing: border-box;
 }
 html{
+    font-family: 'Titillium Web', sans-serif;
     position: relative;
     
 }
@@ -90,7 +89,7 @@ nav {
     top: 7%;
     width: 10%;
     font-size: 55px;
-    font-family: 'Charm', cursive;
+    font-family: 'Titillium Web', sans-serif;
     text-transform: uppercase;
     color: black;
     letter-spacing: 2px;
@@ -116,16 +115,17 @@ nav {
     right: -100%;
     top: 0;
     background-color: rgb(45, 45, 45);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     color: rgb(219, 219, 219);
 }
 .title{
-    padding-top: 1vh;
-    font-family: 'Charm', cursive;
+    padding-top: 10px;
+    font-family: 'Titillium Web', sans-serif;
     letter-spacing: 4px;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 34px;
+    text-align: center;
 }
 .work article {
     position: absolute;
@@ -134,10 +134,10 @@ nav {
     border-radius: 20px;
 }
 .work .praca1{
-    top: 8%;
+    top: 70px;
     left: 10%;
     right: 10%;
-    height: 43%;
+    bottom: 51%;
 }
 .work .praca1 .obraz{
     position: absolute;
@@ -155,11 +155,12 @@ nav {
     position: absolute;
     top:0;
     width: 40%;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: normal;
     padding-top: 10px;
     text-transform: uppercase;
     text-align: center;
+    line-height: 1.1;
 }
 .work article h1{
     width: 50%;
@@ -168,7 +169,7 @@ nav {
     top: 55%;
     left: 1%;
     right: 51%;
-    height: 35%;
+    bottom: 2%;
 }
 .work .praca2 .obraz{
     position: absolute;
@@ -185,7 +186,7 @@ nav {
     top: 55%;
     left: 51%;
     right: 1%;
-    height: 35%;
+    bottom: 2%;
 }
 .work .praca3 .obraz{
     position: absolute;
@@ -205,8 +206,9 @@ nav {
     left: 0;
     width: 50%;
     padding: 0% 2%;
-    text-align: justify;
-    font-size: 22px;
+    /* text-align: justify; */
+    font-size: 15px;
+    line-height: 120%;
 
 }
 .work .praca1 p{
@@ -306,7 +308,7 @@ height: 50%;
     right: 16%;
     width: 50vw;
     height: 50vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 40px;
     text-align: right;
     padding: 15vh 3vw 15vh 20vw;
@@ -320,7 +322,7 @@ height: 50%;
     left: 16%;
     width: 50vw;
     height: 50vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 40px;
     text-align: left;
     padding: 15vh 20vw 15vh 3vw;
