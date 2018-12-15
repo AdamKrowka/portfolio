@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Overlock&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Charm:400,700&subset=latin-ext');
 /* font-family: 'Permanent Marker', cursive; */
-/* font-family: 'Overlock', cursive; */
-
+/* font-family: 'Charm', cursive; */
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +11,14 @@
 
 body {
     border-right-color: rgb(14, 14, 14);
+    overflow: hidden;
+    width: 100vw;
+    color: rgb(219, 219, 219);
 }
 
 :root {
     --width: calc(100% - 80px);
-    overflow: hidden;
-    width: 100%;
+    
 }
 
 ul {
@@ -82,12 +84,12 @@ nav {
     left: 7%;
     top: 7%;
     width: 10%;
-    font-size: 80px;
-    font-family: 'Overlock', cursive;
+    font-size: 55px;
+    font-family: 'Charm', cursive;
     text-transform: uppercase;
     color: black;
     letter-spacing: 2px;
-    text-shadow: 7px -5px 14px rgb(56, 56, 56);
+    text-shadow: 7px -6px 9px rgb(56, 56, 56);
     
 
 }
@@ -104,19 +106,232 @@ nav {
 
 
 
+
 .work {
     right: -100%;
     top: 0;
-    /* background-color: rgb(55, 136, 9); */
     background-color: rgb(45, 45, 45);
+    font-family: 'Roboto', sans-serif;
+    color: rgb(219, 219, 219);
 }
+.title{
+    padding-top: 1vh;
+    font-family: 'Charm', cursive;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 34px;
+}
+.work article {
+    position: absolute;
+    border: solid black 2px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.work .praca1{
+    top: 8%;
+    left: 10%;
+    right: 10%;
+    height: 43%;
+}
+.work .praca1 .obraz{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0px;
+    width: 60%;
+    opacity: 0.5;
+    background-image: url(../img/responsive.png);
+    background-size: cover;
+    background-position: center; 
+}
+.work .praca1 h1,
+.work article h1{
+    position: absolute;
+    top:0;
+    width: 40%;
+    font-size: 40px;
+    font-weight: normal;
+    padding-top: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.work article h1{
+    width: 50%;
+}
+.work .praca2{
+    top: 55%;
+    left: 1%;
+    right: 51%;
+    height: 35%;
+}
+.work .praca2 .obraz{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0px;
+    width: 50%;
+    /* opacity: 0.5; */
+    background-image: url(../img/jsblack.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+.work .praca3{
+    top: 55%;
+    left: 51%;
+    right: 1%;
+    height: 35%;
+}
+.work .praca3 .obraz{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0px;
+    width: 50%;
+    /* opacity: 0.5; */
+    background-image: url(../img/html5.png);
+    background-size: cover;
+    background-position: center; 
+}
+.work p{
+    position: absolute;
+    top: 30%;
+    bottom: 0%;
+    left: 0;
+    width: 50%;
+    padding: 0% 2%;
+    text-align: justify;
+    font-size: 22px;
+
+}
+.work .praca1 p{
+    width: 40%;
+}
+
+
+
 
 .hobby {
     right: -100%;
     top: 0;
-    background-color: rgb(197, 107, 47);
+    overflow: hidden;
 }
 
+.hobby>h1{
+    position: absolute;
+    left: 2vw;
+    font-size: 60px;
+    color: white;
+}
+.hobby .background{
+    position: absolute;
+    top:-100%;
+    bottom: -100%;
+    left: -100%;
+    right:-100%;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.hobby .background .light{
+    position: absolute;
+    background-color: rgb(179, 179, 179);
+    width: 50%;
+    height: 100%;
+    left:0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.hobby .background .dark{
+    position: absolute;
+    background-color: rgb(54, 54, 54);
+    width: 50%;
+    height: 100%;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.hobby .light .images{
+    height: 100%;
+    width: 100%;
+    right: -50%;
+    position: relative;
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
+}
+
+.hobby .dark .images{
+    height: 100%;
+    width: 100%;
+    left: -50%;
+    position: relative;
+    transform: rotate(-45deg);
+    transform-origin: 50% 50%;
+    z-index: -2;
+}
+
+.hobby .images>div{
+    position: absolute;
+width: 100%;
+height: 50%;
+}
+.hobby .light .images .container1{
+    top:0;
+    
+}
+.hobby .images .container2{
+    top: 50%;
+    /* background-color: darkblue; */
+}
+.hobby .light .images .container1 .image{    
+    position: absolute;
+    bottom: 0%;
+    left: 16%;
+    width: 80vw;
+    height: 50vh;
+    background-image: url(../img/gitara.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.hobby .dark .images .container1 .opis{    
+    position: absolute;
+    bottom: 0%;
+    right: 16%;
+    width: 50vw;
+    height: 50vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: right;
+    padding: 15vh 3vw 15vh 20vw;
+    color: rgb(179, 179, 179);
+    
+}
+.hobby .light .images .container2 .opis{
+    color: rgb(53, 53, 53);    
+    position: absolute;
+    top: 0%;
+    left: 16%;
+    width: 50vw;
+    height: 50vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: left;
+    padding: 15vh 20vw 15vh 3vw;
+    
+}
+
+.hobby .dark .images .container2 .image{    
+    position: absolute;
+    top: 0%;
+    right: 16%;
+    width: 80vw;
+    height: 50vh;
+    background-image: url(../img/rower.jpg);
+    background-size: cover;
+    background-position: center;
+}
 .footer {
     right: -100%;
     top: 0;
