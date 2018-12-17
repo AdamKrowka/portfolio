@@ -1,349 +1,356 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web&subset=latin-ext');
+
 /* font-family: 'Titillium Web', sans-serif; */
-@media (orientation:landscape){
+@media (orientation:landscape) {
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html{
-    font-family: 'Titillium Web', sans-serif;
-    position: relative;
-    
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-    overflow: hidden;
-    border-right-color: rgb(14, 14, 14);
-    width: 100vw;
-    height: 100vh;
-    color: rgb(219, 219, 219);
-    --width: calc(100% - 80px);
-}
-.wrapper{
-    overflow: hidden;
-    width: var(--width);
-    height: 100vh;
+    .clearfix::after {
+        display: block;
+        content: " ";
+        clear: both;
+    }
 
-}
+    html {
+        font-family: 'Titillium Web', sans-serif;
+        /* position: relative; */
 
-ul {
-    list-style: none;
-    margin: calc((100vh - (4 * 70px))/2) 0;
-}
+    }
 
-.logo {
-    position: relative;
-    width: 100%;
-    border: solid rgb(12, 12, 12) 2px;
-    border-radius: 50%;
-}
+    body {
+        overflow: hidden;
+        border-right-color: rgb(14, 14, 14);
+        width: 100vw;
+        height: 100vh;
+        color: rgb(219, 219, 219);
+        --width: calc(100% - 80px);
+    }
 
+    .wrapper {
+        overflow: hidden;
+        width: var(--width);
+        height: 100vh;
 
-button {
-    display: block;
-    height: 70px;
-    width: 80px;
-    text-align: center;
-    margin: 0 auto;
-    color: rgb(199, 243, 237);
-    background-color: transparent;
-    border: none;
-    font-size: 35px;
-    
-}
-button:focus{
-    outline: none;
-}
+    }
+
+    ul {
+        list-style: none;
+        margin: calc((100vh - (4 * 70px))/2) 0;
+    }
+
+    .logo {
+        position: relative;
+        width: 100%;
+        border: solid rgb(12, 12, 12) 2px;
+        border-radius: 50%;
+    }
 
 
-button:hover {
-    background-color: rgb(17, 17, 17);
-}
+    button {
+        display: block;
+        height: 70px;
+        width: 80px;
+        text-align: center;
+        margin: 0 auto;
+        color: rgb(199, 243, 237);
+        background-color: transparent;
+        border: none;
+        font-size: 35px;
 
-nav {
-    position: fixed;
-    width: 80px;
-    height: 100vh;
-    background-color: rgb(37, 37, 37);
+    }
 
-}
-
-.header, .work, .hobby, .footer {
-    
-    position: absolute;
-    height: 100%;
-    width: var(--width);
-}
-
-.header {
-    right: 0;
-    top: 0;
-    background-color: rgb(49, 49, 49);
-}
-
-.header h1 {
-    position: absolute;
-    left: 7%;
-    top: 7%;
-    width: 10%;
-    font-size: 55px;
-    font-family: 'Titillium Web', sans-serif;
-    text-transform: uppercase;
-    color: black;
-    letter-spacing: 2px;
-    text-shadow: 7px -6px 9px rgb(56, 56, 56);
-    
-
-}
-
-.header div{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: url(../img/header.jpg);
-    background-size: cover;
-}
+    button:focus {
+        outline: none;
+    }
 
 
+    button:hover {
+        background-color: rgb(17, 17, 17);
+    }
+
+    nav {
+        position: fixed;
+        width: 80px;
+        height: 100vh;
+        background-color: rgb(37, 37, 37);
+
+    }
+
+    .header,
+    .work,
+    .hobby,
+    .footer {
+
+        position: absolute;
+        height: 100%;
+        width: var(--width);
+    }
+
+    .header {
+        right: 0;
+        top: 0;
+        background-color: rgb(49, 49, 49);
+    }
+
+    .header h1 {
+        position: absolute;
+        left: 7%;
+        top: 7%;
+        width: 10%;
+        font-size: 55px;
+        font-family: 'Titillium Web', sans-serif;
+        text-transform: uppercase;
+        color: black;
+        letter-spacing: 2px;
+        text-shadow: 7px -6px 9px rgb(56, 56, 56);
 
 
-.work {
-    right: -100%;
-    top: 0;
-    background-color: rgb(45, 45, 45);
-    font-family: 'Titillium Web', sans-serif;
-    color: rgb(219, 219, 219);
-}
-.title{
-    padding-top: 10px;
-    font-family: 'Titillium Web', sans-serif;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: 34px;
-    text-align: center;
-}
-.work article {
-    position: absolute;
-    border: solid black 2px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-.work .praca1{
-    top: 70px;
-    left: 10%;
-    right: 10%;
-    bottom: 51%;
-}
-.work .praca1 .obraz{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: 0px;
-    width: 60%;
-    opacity: 0.8;
-    background-image: url(../img/responsive.png);
-    background-size: cover;
-    background-position: center; 
-}
-.work .praca1 h1,
-.work article h1{
-    position: absolute;
-    top:0;
-    width: 40%;
-    font-size: 25px;
-    font-weight: normal;
-    padding-top: 10px;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 1.1;
-}
-.work article h1{
-    width: 50%;
-}
-.work .praca2{
-    top: 55%;
-    left: 1%;
-    right: 51%;
-    bottom: 2%;
-}
-.work .praca2 .obraz{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: 0px;
-    width: 50%;
-    /* opacity: 0.5; */
-    background-image: url(../img/jsblack.jpg);
-    background-size: cover;
-    background-position: center; 
-}
-.work .praca3{
-    top: 55%;
-    left: 51%;
-    right: 1%;
-    bottom: 2%;
-}
-.work .praca3 .obraz{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: 0px;
-    width: 50%;
-    /* opacity: 0.5; */
-    background-image: url(../img/html5.png);
-    background-size: cover;
-    background-position: center; 
-}
-.work p{
-    position: absolute;
-    top: 30%;
-    bottom: 0%;
-    left: 0;
-    width: 50%;
-    padding: 0% 2%;
-    /* text-align: justify; */
-    font-size: 15px;
-    line-height: 120%;
+    }
 
-}
-.work .praca1 p{
-    width: 40%;
-}
+    .header div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../img/header.jpg);
+        background-size: cover;
+    }
 
 
 
 
-.hobby {
-    right: -100%;
-    top: 0;
-    overflow: hidden;
-}
+    .work {
+        right: -100%;
+        top: 0;
+        background-color: rgb(45, 45, 45);
+        font-family: 'Titillium Web', sans-serif;
+        color: rgb(219, 219, 219);
+        overflow-y: scroll;
 
-.hobby>h1{
-    position: absolute;
-    left: 2vw;
-    font-size: 60px;
-    color: white;
-}
-.hobby .background{
-    position: absolute;
-    top:-100%;
-    bottom: -100%;
-    left: -100%;
-    right:-100%;
-    transform: rotate(45deg);
-    z-index: -1;
-}
+    }
 
-.hobby .background .light{
-    position: absolute;
-    background-color: rgb(179, 179, 179);
-    width: 50%;
-    height: 100%;
-    left:0;
-    z-index: -1;
-    overflow: hidden;
-}
+    .title {
+        padding-top: 10px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 34px;
+        text-align: center;
+    }
 
-.hobby .background .dark{
-    position: absolute;
-    background-color: rgb(54, 54, 54);
-    width: 50%;
-    height: 100%;
-    right: 0;
-    z-index: -1;
-    overflow: hidden;
-}
+    .work article {
+        width: 90%;
+        margin: 5% auto;
+        border: solid black 2px;
+        overflow: hidden;
+        border-radius: 20px;
+        /* height: 35vh; */
+    }
 
-.hobby .light .images{
-    height: 100%;
-    width: 100%;
-    right: -50%;
-    position: relative;
-    transform: rotate(-45deg);
-    transform-origin: 50% 50%;
-}
+    .work .opis {
+        float: left;
+        width: 60%;
 
-.hobby .dark .images{
-    height: 100%;
-    width: 100%;
-    left: -50%;
-    position: relative;
-    transform: rotate(-45deg);
-    transform-origin: 50% 50%;
-    z-index: -2;
-}
+    }
 
-.hobby .images>div{
-    position: absolute;
-width: 100%;
-height: 50%;
-}
-.hobby .light .images .container1{
-    top:0;
-    
-}
-.hobby .images .container2{
-    top: 50%;
-    /* background-color: darkblue; */
-}
-.hobby .light .images .container1 .image{    
-    position: absolute;
-    bottom: 0%;
-    left: 16%;
-    width: 80vw;
-    height: 50vh;
-    background-image: url(../img/gitara.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.hobby .dark .images .container1 .opis{    
-    position: absolute;
-    bottom: 0%;
-    right: 16%;
-    width: 50vw;
-    height: 50vh;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 40px;
-    text-align: right;
-    padding: 15vh 3vw 15vh 20vw;
-    color: rgb(179, 179, 179);
-    
-}
-.hobby .light .images .container2 .opis{
-    color: rgb(53, 53, 53);    
-    position: absolute;
-    top: 0%;
-    left: 16%;
-    width: 50vw;
-    height: 50vh;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 40px;
-    text-align: left;
-    padding: 15vh 20vw 15vh 3vw;
-    
-}
+    .work .praca2 .opis,
+    .work .praca2 .obraz {
+        float: right;
+    }
 
-.hobby .dark .images .container2 .image{    
-    position: absolute;
-    top: 0%;
-    right: 16%;
-    width: 80vw;
-    height: 50vh;
-    background-image: url(../img/rower.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.footer {
-    right: -100%;
-    top: 0;
-    background-color: rgb(104, 28, 175);
-}
+    .work .obraz {
+        float: left;
+        width: 40%;
+        height: 100%;
+        border-left: solid black 2px;
+        border-radius: 20px;
+    }
+
+    .work .praca2 .obraz {
+        border-left: none;
+        border-right: solid black 2px;
+    }
+
+    .work .praca1 .obraz {
+        opacity: 0.8;
+        background-image: url(../img/responsive.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .work article h1 {
+        width: 100%;
+        font-size: 25px;
+        font-weight: normal;
+        padding-top: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+
+    .work .praca2 .obraz {
+        background-image: url(../img/jsblack.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .work .praca3 .obraz {
+        background-image: url(../img/html5.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .work p {
+        padding: 5% 4%;
+        font-size: 15px;
+        line-height: 120%;
+        padding-bottom: 40px;
+
+    }
+
+
+
+
+
+    .hobby {
+        right: -100%;
+        top: 0;
+        overflow: hidden;
+    }
+
+    .hobby>h1 {
+        position: absolute;
+        left: 2vw;
+        font-size: 60px;
+        color: white;
+    }
+
+    .hobby .background {
+        position: absolute;
+        top: -100%;
+        bottom: -100%;
+        left: -100%;
+        right: -100%;
+        transform: rotate(45deg);
+        z-index: -1;
+    }
+
+    .hobby .background .light {
+        position: absolute;
+        background-color: rgb(179, 179, 179);
+        width: 50%;
+        height: 100%;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .hobby .background .dark {
+        position: absolute;
+        background-color: rgb(54, 54, 54);
+        width: 50%;
+        height: 100%;
+        right: 0;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .hobby .light .images {
+        height: 100%;
+        width: 100%;
+        right: -50%;
+        position: relative;
+        transform: rotate(-45deg);
+        transform-origin: 50% 50%;
+    }
+
+    .hobby .dark .images {
+        height: 100%;
+        width: 100%;
+        left: -50%;
+        position: relative;
+        transform: rotate(-45deg);
+        transform-origin: 50% 50%;
+        z-index: -2;
+    }
+
+    .hobby .images>div {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+    }
+
+    .hobby .light .images .container1 {
+        top: 0;
+
+    }
+
+    .hobby .images .container2 {
+        top: 50%;
+        /* background-color: darkblue; */
+    }
+
+    .hobby .light .images .container1 .image {
+        position: absolute;
+        bottom: 0%;
+        left: 16%;
+        width: 80vw;
+        height: 50vh;
+        background-image: url(../img/gitara.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hobby .dark .images .container1 .opis {
+        position: absolute;
+        bottom: 0%;
+        right: 16%;
+        width: 50vw;
+        height: 50vh;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 40px;
+        text-align: right;
+        padding: 15vh 3vw 15vh 20vw;
+        color: rgb(179, 179, 179);
+
+    }
+
+    .hobby .light .images .container2 .opis {
+        color: rgb(53, 53, 53);
+        position: absolute;
+        top: 0%;
+        left: 16%;
+        width: 50vw;
+        height: 50vh;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 40px;
+        text-align: left;
+        padding: 15vh 20vw 15vh 3vw;
+
+    }
+
+    .hobby .dark .images .container2 .image {
+        position: absolute;
+        top: 0%;
+        right: 16%;
+        width: 80vw;
+        height: 50vh;
+        background-image: url(../img/rower.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .footer {
+        right: -100%;
+        top: 0;
+        background-color: rgb(104, 28, 175);
+    }
 
 
 
