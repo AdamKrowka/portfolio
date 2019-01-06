@@ -3,128 +3,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
-    <link rel="Shortcut icon" href="icon.png">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/stylemobile.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+        canvas{
+            border: 1px solid black;
+            margin: 10px 10px;
+        }
+        p{
+            display: inline;
+            padding-left: 10px;
+        }
+        .speedRange , .slideRange{
+            display: inline;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 
-
-<body>
-    <nav>
-        <img class="logo" onclick="header()" src="img/favicon-96x96.png" alt="">
-        <ul>
-            <li><button class="btnNav" onclick="header()"><i class="fas fa-home"></i></button></li>
-            <li><button class="btnNav" onclick="work()"><i class="fas fa-code"></i></button></li>
-            <li><button class="btnNav" onclick="hobby()"><i class="fas fa-guitar"></i></button></li>
-            <li><button class="btnNav" onclick="footer()"><i class="fas fa-info"></i></button></li>
-        </ul>
-    </nav>
-
-    <div class="pozycja" id="slide" s>
-        <div class="wrapper">
-
-            <header id="header" class="header">
-                <div class="headPick">
-                    <h1> Portfolio Adam Krówka</h1>
-                </div>
-            </header>
+<body id="body">
+    <canvas></canvas>
+    <div id="slidery">
+        <div class="slideRange">
+            <p id="BallsCountP"></p>
+            <input type="range" min="1" max="400" value="100" class="slider" id="BallsCountRange">
 
 
-            <main id="work" class="work">
-                <h1 class="title">Jakie zdolności już posiadam</h1>
-                <article class="praca1" id="praca1">
-                    <div class="opis" id="opis1">
-                        <h1>Responsywność</h1>
-                        <p>Dbam o to aby strony które tworzę wyglądały świetnie na każdym urządzeniu. Nie ważne czy
-                            jest to ogromny monitor komputera czy mały ekran smartfona.
-                            Znany mi jest bootstrap oraz potrafię zbudować responsywna stronę na zamytaniach "media".</p>
-                    </div>
-                    <div class="obraz"></div>
-                </article>
-                <article class="praca2" id="praca2">
-                    <div class="opis" id="opis2">
-                        <h1>JavaScript</h1>
-                        <p>Na bieżąco uczę się pisać skrypty w JS, studjuję równierz JQuery. Mam nadzieję, że jak
-                            wejdziecie na moją stronę będziecie zadowoleni z efektu mojej pracy.</p>
-                    </div>
-                    <div class="obraz"></div>
-
-                </article>
-                <article class="praca3" id="praca3">
-                    <div class="opis" id="opis3">
-                        <h1>Najnowsze Standardy</h1>
-                        <p>Jestem na bierząco z aktualnymi stadndardami które powinnien znać każdy szanujący się
-                            Web-developer.</p>
-                    </div>
-                    <div class="obraz"></div>
-                </article>
-            </main>
+        </div>
+        <div class="speedRange">
+            <p id="SpeedP"></p>
+            <input type="range" min="1" max="10" value="5" class="slider" id="SpeedRange">
 
 
-
-            <section id="hobby" class="hobby">
-
-                <h1 class="title">Moje Hobby</h1>
-                <div class="background">
-                    <div class="light">
-                        <div class="images">
-
-                            <div class="container1">
-                                <div class="image"></div>
-                            </div>
-
-                            <div class="container2">
-                                <div class="opis">
-                                    <p>A jeśli jest sprzyjająca pogoda chętnie też jeżdżę na rowerze.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="dark">
-                        <div class="images">
-
-                            <div class="container1">
-                                <div class="opis">
-                                    <p>W wolny czasie uczę się grać na gitarze.</p>
-                                </div>
-                            </div>
-
-                            <div class="container2">
-                                <div class="image"></div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-
-
-            </section>
-
-
-
-            <footer id="footer" class="footer">
-                <h1>
-                    This website wos made by my and only my :D
-                </h1>
-
-            </footer>
         </div>
     </div>
-    <script src="js/script.js"></script>
-    <!-- <script src="js/javaslider.js"></script> -->
+    <script src="canvas.js"></script>
 </body>
 
 </html>
