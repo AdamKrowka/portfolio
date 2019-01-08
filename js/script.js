@@ -1,113 +1,128 @@
-// window.addEventListener('resize'),
-// function (event) {
+function myFunction(x) {
+    var p1 = document.getElementById("praca1");
+    var p2 = document.getElementById("praca2");
+    var p3 = document.getElementById("praca3");
+    if (x.matches) {
+        p1.style.display = "block";
+        p2.style.display = "block";
+        p3.style.display = "block";
 
-var orientation;
+
+        var wysOpisu1 = document.getElementById("opis1").clientHeight;
+        var wysOpisu2 = document.getElementById("opis2").clientHeight;
+        var wysOpisu3 = document.getElementById("opis3").clientHeight;
+        document.getElementById("praca1").style.height = wysOpisu1 + "px";
+        document.getElementById("praca2").style.height = wysOpisu2 + "px";
+        document.getElementById("praca3").style.height = wysOpisu3 + "px"
+        document.body.onresize = Resize();
+
+    } else {
+        p1.style.display = "none";
+        p2.style.display = "block";
+        p3.style.display = "none";
+        document.getElementById("praca1").style.height = "40%";
+        document.getElementById("praca2").style.height = "40%";
+        document.getElementById("praca3").style.height = "40%";
+
+
+        var square = document.getElementById('slide');
+        var position = 0;
+        var slide = 0;
+
+        var position1 = 0;
+        var slide1 = 0;
+        var left = 0;
+        var strona = 1;
+        var prac = 1;
+        var praca = document.getElementById("work");
+        // var p1 = document.getElementById("praca1");
+        // var p2 = document.getElementById("praca2");
+        // var p3 = document.getElementById("praca3");
+
+
+        square.addEventListener("touchstart", function () {
+            position = event.touches[0].clientX;
+        }, false);
+
+        square.addEventListener("touchend", function () {
+            slide = event.changedTouches[0].clientX - position;
+
+            // console.log(slide);
+            if (strona == 1) {
+                if (slide < (0 - 50)) {
+                    left = left - 100;
+                    strona++;
+                }
+            } else if (strona == 2 || strona == 3) {
+                if (slide < (0 - 50)) {
+                    left = left - 100;
+                    strona++;
+                } else if (slide > 50) {
+                    left = left + 100;
+                    strona--;
+                }
+            } else if (strona == 4) {
+                if (slide > 50) {
+                    left = left + 100;
+                    strona--;
+                }
+            }
+
+            square.style.left = left + "vw";
+        }, false);
+
+        praca.addEventListener("touchstart", function () {
+            position1 = event.touches[0].clientX;
+        }, false);
+
+        praca.addEventListener("touchend", function () {
+            slide1 = event.changedTouches[0].clientX - position1;
+            if (slide1 > -20 && slide1 < 20) {
+                if (prac == 1) {
+                    p1.style.display = "none";
+                    p2.style.display = "block";
+                    p3.style.display = "none";
+                    prac = 2;
+                } else if (prac == 2) {
+                    p1.style.display = "none";
+                    p2.style.display = "none";
+                    p3.style.display = "block";
+                    prac = 3;
+                } else if (prac == 3) {
+                    p1.style.display = "block";
+                    p2.style.display = "none";
+                    p3.style.display = "none";
+                    prac = 1;
+                }
+                console.log(prac);
+
+            }
 
 
 
+
+            square.style.left = left + "vw";
+        }, false);
+    }
+}
 
 var x = window.matchMedia("(orientation:landscape)")
 myFunction(x)
 x.addListener(myFunction)
 
 
-// Funkcja sprawdza warunek jaka orientacja
-function myFunction(x) {
-
-
-    // deklaracja zmiennych dla elementów umiejętności
-    var p1 = document.getElementById("praca1");
-    var p2 = document.getElementById("praca2");
-    var p3 = document.getElementById("praca3");
-
-    var opis1 = document.getElementById("opis1");
-    var opis2 = document.getElementById("opis2");
-    var opis3 = document.getElementById("opis3");
-
-    var obraz1 = document.getElementById("obraz1")
-    var obraz2 = document.getElementById("obraz2")
-    var obraz2 = document.getElementById("obraz2")
 
 
 
-    // Jeśli lanscape
-    if (x.matches) {
+;
 
-
-        // Startowe pobranie wysokości opisu i ustawienie rodzicowi tej wysokości bez tego rodzic nie ma wysokości
-
-        p1.style.height = opis1.clientHeight + "px";
-        p2.style.height = opis2.clientHeight + "px";
-        p3.style.height = opis2.clientHeight + "px";
-
-
-        // Zczytywanie wysokości opisu w czasie rzeczywistym i uruchomienie funkcji Resize() zapisanej poniżej
-        window.addEventListener('resize', function (event) {
-            Resize("landscape");
-
-        });
-
-        przewijanie(0);
-
-        // Jeśli portrait
-    } else {
-        obraz1.style.height = "30vh"
-        obraz2.style.height = "30vh"
-        obraz3.style.height = "30vh"
-
-        var h1 = obraz1.clientHeight + opis1.clientHeight;
-        var h2 = obraz1.clientHeight + opis2.clientHeight;
-        var h3 = obraz1.clientHeight + opis3.clientHeight;
-
-        p1.style.height = h1 + "px";
-        p2.style.height = h2 + "px";
-        p3.style.height = h3 + "px";
-        window.addEventListener('resize', function (event) {
-            Resize("portrait")
-
-        });
-
-        przewijanie(1);
-
-    }
-}
-
-// }
-
-
-function Resize(orientation) {
+function Resize() {
     var wysOpisu1 = document.getElementById("opis1").clientHeight;
     var wysOpisu2 = document.getElementById("opis2").clientHeight;
     var wysOpisu3 = document.getElementById("opis3").clientHeight;
-
-    if (orientation === "landscape") {
-
-        document.getElementById("praca1").style.height = wysOpisu1 + "px";
-        document.getElementById("praca2").style.height = wysOpisu2 + "px";
-        document.getElementById("praca3").style.height = wysOpisu3 + "px";
-
-        document.getElementById("obraz1").style.height = "100%"
-        document.getElementById("obraz2").style.height = "100%"
-        document.getElementById("obraz3").style.height = "100%"
-
-    } else if (orientation === "portrait") {
-        document.getElementById("obraz1").style.height = "30vh"
-        document.getElementById("obraz2").style.height = "30vh"
-        document.getElementById("obraz3").style.height = "30vh"
-
-        var pictureHeight = document.getElementById("obraz1").clientHeight;
-
-        var h1 = pictureHeight + wysOpisu1;
-        var h2 = pictureHeight + wysOpisu2;
-        var h3 = pictureHeight + wysOpisu3;
-        console.log("obraz:" + pictureHeight);
-        console.log("opis:" + wysOpisu1);
-        console.log("cały:" + h1);
-        document.getElementById("praca1").style.height = h1 + "px";
-        document.getElementById("praca2").style.height = h2 + "px";
-        document.getElementById("praca3").style.height = h3 + "px";
-
-    } else {}
+    document.getElementById("praca1").style.height = wysOpisu1 + "px";
+    document.getElementById("praca2").style.height = wysOpisu2 + "px";
+    document.getElementById("praca3").style.height = wysOpisu3 + "px";
 }
 
 function header() {
@@ -197,47 +212,4 @@ function footer() {
     work.style.zIndex = "0";
     header.style.zIndex = "0";
     hobby.style.zIndex = "0";
-}
-
-function przewijanie(n) {
-    if (n === 1) {
-        var square = document.getElementById('slide');
-        var position = 0;
-        var slide = 0;
-        var left = 0;
-        var strona = 1;
-
-        square.addEventListener("touchstart", function () {
-            position = event.touches[0].clientX;
-        }, false);
-
-        square.addEventListener("touchend", function () {
-            slide = event.changedTouches[0].clientX - position;
-
-            // console.log(slide);
-            if (strona == 1) {
-                if (slide < (0 - 50)) {
-                    left = left - 100;
-                    strona++;
-                }
-            } else if (strona == 2 || strona == 3) {
-                if (slide < (0 - 50)) {
-                    left = left - 100;
-                    strona++;
-                } else if (slide > 50) {
-                    left = left + 100;
-                    strona--;
-                }
-            } else if (strona == 4) {
-                if (slide > 50) {
-                    left = left + 100;
-                    strona--;
-                }
-            }
-
-            square.style.left = left + "vw";
-        }, false);
-    } else {
-
-    }
 }
