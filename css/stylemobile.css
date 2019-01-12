@@ -55,6 +55,7 @@ header h1 {
     font-family: 'Titillium Web', sans-serif;
     color: rgb(219, 219, 219);
     overflow-y: scroll;
+    padding-bottom: 10vh;
 }
 
 .title {
