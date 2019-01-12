@@ -9,21 +9,21 @@
     <link rel="Shortcut icon" href="icon.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/stylemobile.css">
-
-
+    <link rel="stylesheet" href="css/style.css" id="stylePC"> 
+    <link rel="stylesheet" href="" id="styleMobilki">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 </head>
 
 
-<body id="body">
-    <nav>
-        <img class="logo" onclick="header()" src="img/favicon-96x96.png" alt="">
+<body>
+    <nav id="nawigacja">
+        <img class="logo" id="logo" onclick="header()" src="img/favicon-96x96.png" alt="">
         <ul>
-            <li><button class="btnNav" onclick="header()"><i class="fas fa-home"></i></button></li>
-            <li><button class="btnNav" onclick="work()"><i class="fas fa-code"></i></button></li>
-            <li><button class="btnNav" onclick="hobby()"><i class="fas fa-guitar"></i></button></li>
-            <li><button class="btnNav" onclick="footer()"><i class="fas fa-info"></i></button></li>
+            <li><button class="btnNav" id="headerBtn"><i class="fas fa-home"></i></button></li>
+            <li><button class="btnNav" id="workBtn"><i class="fas fa-code"></i></button></li>
+            <li><button class="btnNav" id="hobbyBtn"><i class="fas fa-guitar"></i></button></li>
+            <li><button class="btnNav" id="footerBtn"><i class="fas fa-info"></i></button></li>
         </ul>
     </nav>
 
@@ -38,7 +38,7 @@
 
 
             <main id="work" class="work">
-
+                <div class="praca">
                 <h1 class="title">Jakie zdolności już posiadam</h1>
                 <article class="praca1" id="praca1">
                     <div class="opis" id="opis1">
@@ -47,7 +47,7 @@
                             jest to ogromny monitor komputera czy mały ekran smartfona.
                             Znany mi jest bootstrap oraz potrafię zbudować responsywna stronę na zamytaniach "media".</p>
                     </div>
-                    <div class="obraz"></div>
+                    <div class="obraz" id="obraz1"></div>
                 </article>
                 <article class="praca2" id="praca2">
                     <div class="opis" id="opis2">
@@ -55,7 +55,7 @@
                         <p>Na bieżąco uczę się pisać skrypty w JS, studjuję równierz JQuery. Mam nadzieję, że jak
                             wejdziecie na moją stronę będziecie zadowoleni z efektu mojej pracy.</p>
                     </div>
-                    <div class="obraz"></div>
+                    <div class="obraz" id="obraz2"></div>
 
                 </article>
                 <article class="praca3" id="praca3">
@@ -64,61 +64,57 @@
                         <p>Jestem na bierząco z aktualnymi stadndardami które powinnien znać każdy szanujący się
                             Web-developer.</p>
                     </div>
-                    <div class="obraz"></div>
+                    <div class="obraz" id="obraz3"></div>
                 </article>
-
+                </div>
+                
+                <div class="zainteresowania">
+                    <h1 class="title">Moje Zainteresowania</h1> 
+                    <article class="hobby1" id="hobby1">
+                        <div class="opis" id="opis4">
+                            <h1 class="hobbyTitle">Gitara</h1>
+                            <p>W wolnym czasie uczę się grać na gitarze.</p>
+                    </div>
+                    <div class="obraz" id="obraz4"></div>
+                    </article>
+                    <article class="hobby2" id="hobby2">
+                        <div class="opis" id="opis5">
+                        <h1 class="hobbyTitle">Rower</h1>
+                        <p>Czasami jak jest ładna pogoda lubię też wyjść pojeździć na rowerze.</p>
+                    </div>
+                    <div class="obraz" id="obraz5"></div>
+                    </article>
+                </div>
+            
             </main>
-
 
 
             <section id="hobby" class="hobby">
 
-                <h1 class="title">Moje Hobby</h1>
-                <div class="background">
-                    <div class="light">
-                        <div class="images">
-
-                            <div class="container1">
-                                <div class="image"></div>
-                            </div>
-
-                            <div class="container2">
-                                <div class="opis">
-                                    <p>A jeśli jest sprzyjająca pogoda chętnie też jeżdżę na rowerze.</p>
-                                </div>
-                            </div>
-
+                    <script src="js/jscolor.js"></script>
+                    <div class="toolBar" id="toolBar">
+                        <div class="colorPickerWrap">
+                            <span>Wybierz kolor:</span>
+                            <!-- <input class="jscolor" value="000000" id="inputColorPicker"> -->
+                            <input class="jscolor {onFineChange:'update(this)'}" value="000000" id="inputColorPicker">
+                
                         </div>
+                        <!-- <img src="img/eraser.jpg" id="eraser"> -->
+                        <img src="cursor.png" id="eraser">
+                        <p id="CLEAR">CLEAR</p>
+                        <p class="rangep">Size:</p>
+                        <input type="range" name="line" id="LineWidth" max="50" min="1" value="10">
                     </div>
-
-                    <div class="dark">
-                        <div class="images">
-
-                            <div class="container1">
-                                <div class="opis">
-                                    <p>W wolny czasie uczę się grać na gitarze.</p>
-                                </div>
-                            </div>
-
-                            <div class="container2">
-                                <div class="image"></div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-
-
+                    <canvas id="mainCanvas"></canvas>
+                    
+                    <script src="js/canvas.js"></script>
+                    <script src="js/scriptc.js"></script>
             </section>
+            
 
 
 
             <footer id="footer" class="footer">
-                <canvas></canvas>
                 <h1>
                     This website wos made by my and only my :D
                 </h1>
@@ -126,9 +122,11 @@
             </footer>
         </div>
     </div>
+
     <script src="js/script.js"></script>
-    <script src="js/canvas.js"></script>
+    <script src="js/qscript.js"></script>
     <!-- <script src="js/javaslider.js"></script> -->
+
 </body>
 
 </html>
