@@ -113,11 +113,11 @@ function Resize(display) {
 
     } else if (display === "touchL") {
         // document.getElementsByClassName("obraz").style.height = "90vh"
-        document.getElementById("obraz1").style.height = "70vh"
-        document.getElementById("obraz2").style.height = "70vh"
-        document.getElementById("obraz3").style.height = "70vh"
-        document.getElementById("obraz4").style.height = "70vh"
-        document.getElementById("obraz5").style.height = "70vh"
+        document.getElementById("obraz1").style.height = "50vh"
+        document.getElementById("obraz2").style.height = "50vh"
+        document.getElementById("obraz3").style.height = "50vh"
+        document.getElementById("obraz4").style.height = "50vh"
+        document.getElementById("obraz5").style.height = "50vh"
 
         var pictureHeight = document.getElementById("obraz1").clientHeight;
 
