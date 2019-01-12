@@ -3,53 +3,130 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-        }
-        canvas{
-            border: 1px solid black;
-            margin: 10px 10px;
-        }
-        p{
-            display: inline;
-            padding-left: 10px;
-        }
-        .speedRange , .slideRange{
-            display: inline;
-            padding-left: 20px;
-        }
-    </style>
+    <title>Portfolio</title>
+    <link rel="Shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" id="stylePC"> 
+    <link rel="stylesheet" href="" id="styleMobilki">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
 </head>
 
-<body id="body">
-    <canvas></canvas>
-    <div id="slidery">
-        <div class="slideRange">
-            <p id="BallsCountP"></p>
-            <input type="range" min="1" max="400" value="100" class="slider" id="BallsCountRange">
+
+<body>
+    <nav id="nawigacja">
+        <img class="logo" id="logo" onclick="header()" src="img/favicon-96x96.png" alt="">
+        <ul>
+            <li><button class="btnNav" id="headerBtn"><i class="fas fa-home"></i></button></li>
+            <li><button class="btnNav" id="workBtn"><i class="fas fa-code"></i></button></li>
+            <li><button class="btnNav" id="hobbyBtn"><i class="fas fa-guitar"></i></button></li>
+            <li><button class="btnNav" id="footerBtn"><i class="fas fa-info"></i></button></li>
+        </ul>
+    </nav>
+
+    <div class="pozycja" id="slide" s>
+        <div class="wrapper">
+
+            <header id="header" class="header">
+                <div class="headPick">
+                    <h1> Portfolio Adam Krówka</h1>
+                </div>
+            </header>
 
 
-        </div>
-        <div class="speedRange">
-            <p id="SpeedP"></p>
-            <input type="range" min="1" max="10" value="5" class="slider" id="SpeedRange">
+            <main id="work" class="work">
+                <div class="praca">
+                <h1 class="title">Jakie zdolności już posiadam</h1>
+                <article class="praca1" id="praca1">
+                    <div class="opis" id="opis1">
+                        <h1>Responsywność</h1>
+                        <p>Dbam o to aby strony które tworzę wyglądały świetnie na każdym urządzeniu. Nie ważne czy
+                            jest to ogromny monitor komputera czy mały ekran smartfona.
+                            Znany mi jest bootstrap oraz potrafię zbudować responsywna stronę na zamytaniach "media".</p>
+                    </div>
+                    <div class="obraz" id="obraz1"></div>
+                </article>
+                <article class="praca2" id="praca2">
+                    <div class="opis" id="opis2">
+                        <h1>JavaScript</h1>
+                        <p>Na bieżąco uczę się pisać skrypty w JS, studjuję równierz JQuery. Mam nadzieję, że jak
+                            wejdziecie na moją stronę będziecie zadowoleni z efektu mojej pracy.</p>
+                    </div>
+                    <div class="obraz" id="obraz2"></div>
+
+                </article>
+                <article class="praca3" id="praca3">
+                    <div class="opis" id="opis3">
+                        <h1>Najnowsze Standardy</h1>
+                        <p>Jestem na bierząco z aktualnymi stadndardami które powinnien znać każdy szanujący się
+                            Web-developer.</p>
+                    </div>
+                    <div class="obraz" id="obraz3"></div>
+                </article>
+                </div>
+                
+                <div class="zainteresowania">
+                    <h1 class="title">Moje Zainteresowania</h1> 
+                    <article class="hobby1" id="hobby1">
+                        <div class="opis" id="opis4">
+                            <h1 class="hobbyTitle">Gitara</h1>
+                            <p>W wolnym czasie uczę się grać na gitarze.</p>
+                    </div>
+                    <div class="obraz" id="obraz4"></div>
+                    </article>
+                    <article class="hobby2" id="hobby2">
+                        <div class="opis" id="opis5">
+                        <h1 class="hobbyTitle">Rower</h1>
+                        <p>Czasami jak jest ładna pogoda lubię też wyjść pojeździć na rowerze.</p>
+                    </div>
+                    <div class="obraz" id="obraz5"></div>
+                    </article>
+                </div>
+            
+            </main>
 
 
+            <section id="hobby" class="hobby">
+
+                    <script src="js/jscolor.js"></script>
+                    <div class="toolBar" id="toolBar">
+                        <div class="colorPickerWrap">
+                            <span>Wybierz kolor:</span>
+                            <!-- <input class="jscolor" value="000000" id="inputColorPicker"> -->
+                            <input class="jscolor {onFineChange:'update(this)'}" value="000000" id="inputColorPicker">
+                
+                        </div>
+                        <!-- <img src="img/eraser.jpg" id="eraser"> -->
+                        <img src="cursor.png" id="eraser">
+                        <p id="CLEAR">CLEAR</p>
+                        <p class="rangep">Size:</p>
+                        <input type="range" name="line" id="LineWidth" max="50" min="1" value="10">
+                    </div>
+                    <canvas id="mainCanvas"></canvas>
+                    
+                    <script src="js/canvas.js"></script>
+                    <script src="js/scriptc.js"></script>
+            </section>
+            
+
+
+
+            <footer id="footer" class="footer">
+                <h1>
+                    This website wos made by my and only my :D
+                </h1>
+
+            </footer>
         </div>
     </div>
-    <script src="canvas.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/qscript.js"></script>
+    <!-- <script src="js/javaslider.js"></script> -->
+
 </body>
 
 </html>
