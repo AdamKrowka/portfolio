@@ -7,22 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
     <link rel="Shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" id="stylePC"> 
+    <link rel="stylesheet" href="css/style.css" id="stylePC">
     <link rel="stylesheet" href="" id="styleMobilki">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+    <script>
+        var is_touch_device = 'ontouchstart' in document.documentElement;
+if(is_touch_device){
+
+ $("#styleMobilki").attr({href : "css/stylemobile.css"});
+ $("#stylePC").attr({href : ""});
+}
+else{
+    $("#styleMobilki").attr({href : ""});
+ $("#stylePC").attr({href : "css/style.css"});
+}
+    </script>
+
 </head>
 
 
 <body>
     <nav id="nawigacja">
-        <img class="logo" id="logo" onclick="header()" src="img/favicon-96x96.png" alt="">
+        <img class="logo" id="logo" src="img/favicon-96x96.png" alt="">
         <ul>
             <li><button class="btnNav" id="headerBtn"><i class="fas fa-home"></i></button></li>
             <li><button class="btnNav" id="workBtn"><i class="fas fa-code"></i></button></li>
-            <li><button class="btnNav" id="hobbyBtn"><i class="fas fa-guitar"></i></button></li>
+            <li><button class="btnNav" id="hobbyBtn"><i class="fas fa-paint-brush"></i></button></li>
             <li><button class="btnNav" id="footerBtn"><i class="fas fa-info"></i></button></li>
         </ul>
     </nav>
@@ -39,93 +52,227 @@
 
             <main id="work" class="work">
                 <div class="praca">
-                <h1 class="title">Jakie zdolności już posiadam</h1>
-                <article class="praca1" id="praca1">
-                    <div class="opis" id="opis1">
-                        <h1>Responsywność</h1>
-                        <p>Dbam o to aby strony które tworzę wyglądały świetnie na każdym urządzeniu. Nie ważne czy
-                            jest to ogromny monitor komputera czy mały ekran smartfona.
-                            Znany mi jest bootstrap oraz potrafię zbudować responsywna stronę na zamytaniach "media".</p>
-                    </div>
-                    <div class="obraz" id="obraz1"></div>
-                </article>
-                <article class="praca2" id="praca2">
-                    <div class="opis" id="opis2">
-                        <h1>JavaScript</h1>
-                        <p>Na bieżąco uczę się pisać skrypty w JS, studjuję równierz JQuery. Mam nadzieję, że jak
-                            wejdziecie na moją stronę będziecie zadowoleni z efektu mojej pracy.</p>
-                    </div>
-                    <div class="obraz" id="obraz2"></div>
+                    <h1 class="title">Jakie zdolności już posiadam</h1>
+                    <article class="praca1" id="praca1">
+                        <div class="opis" id="opis1">
+                            <h1>Responsywność</h1>
+                            <p>Dbam o to aby strony które tworzę wyglądały świetnie na każdym urządzeniu. Nie ważne czy
+                                jest to ogromny monitor komputera czy mały ekran smartfona.
+                                Znany mi jest bootstrap oraz potrafię zbudować responsywna stronę na zamytaniach
+                                "media".</p>
+                        </div>
+                        <div class="obraz" id="obraz1"></div>
+                    </article>
+                    <article class="praca2" id="praca2">
+                        <div class="opis" id="opis2">
+                            <h1>JavaScript</h1>
+                            <p>Na bieżąco uczę się pisać skrypty w JS, studjuję równierz JQuery. Mam nadzieję, że jak
+                                wejdziecie na moją stronę będziecie zadowoleni z efektu mojej pracy.</p>
+                        </div>
+                        <div class="obraz" id="obraz2"></div>
 
-                </article>
-                <article class="praca3" id="praca3">
-                    <div class="opis" id="opis3">
-                        <h1>Najnowsze Standardy</h1>
-                        <p>Jestem na bierząco z aktualnymi stadndardami które powinnien znać każdy szanujący się
-                            Web-developer.</p>
-                    </div>
-                    <div class="obraz" id="obraz3"></div>
-                </article>
+                    </article>
+                    <article class="praca3" id="praca3">
+                        <div class="opis" id="opis3">
+                            <h1>Najnowsze Standardy</h1>
+                            <p>Jestem na bierząco z aktualnymi stadndardami które powinnien znać każdy szanujący się
+                                Web-developer.</p>
+                        </div>
+                        <div class="obraz" id="obraz3"></div>
+                    </article>
                 </div>
-                
+
                 <div class="zainteresowania">
-                    <h1 class="title">Moje Zainteresowania</h1> 
+                    <h1 class="title">Moje Zainteresowania</h1>
                     <article class="hobby1" id="hobby1">
                         <div class="opis" id="opis4">
                             <h1 class="hobbyTitle">Gitara</h1>
                             <p>W wolnym czasie uczę się grać na gitarze.</p>
-                    </div>
-                    <div class="obraz" id="obraz4"></div>
+                        </div>
+                        <div class="obraz" id="obraz4"></div>
                     </article>
                     <article class="hobby2" id="hobby2">
                         <div class="opis" id="opis5">
-                        <h1 class="hobbyTitle">Rower</h1>
-                        <p>Czasami jak jest ładna pogoda lubię też wyjść pojeździć na rowerze.</p>
-                    </div>
-                    <div class="obraz" id="obraz5"></div>
+                            <h1 class="hobbyTitle">Rower</h1>
+                            <p>Czasami jak jest ładna pogoda lubię też wyjść pojeździć na rowerze.</p>
+                        </div>
+                        <div class="obraz" id="obraz5"></div>
                     </article>
                 </div>
-            
+
             </main>
 
 
             <section id="hobby" class="hobby">
 
-                    <script src="js/jscolor.js"></script>
-                    <div class="toolBar" id="toolBar">
-                        <div class="colorPickerWrap">
-                            <span>Wybierz kolor:</span>
-                            <!-- <input class="jscolor" value="000000" id="inputColorPicker"> -->
-                            <input class="jscolor {onFineChange:'update(this)'}" value="000000" id="inputColorPicker">
-                
-                        </div>
-                        <!-- <img src="img/eraser.jpg" id="eraser"> -->
-                        <img src="cursor.png" id="eraser">
-                        <p id="CLEAR">CLEAR</p>
-                        <p class="rangep">Size:</p>
-                        <input type="range" name="line" id="LineWidth" max="50" min="1" value="10">
+                <script src="js/jscolor.js"></script>
+                <div class="toolBar" id="toolBar">
+                    <div class="colorPickerWrap">
+                        <span>Wybierz kolor:</span>
+                        <!-- <input class="jscolor" value="000000" id="inputColorPicker"> -->
+                        <input class="jscolor {onFineChange:'update(this)'}" value="000000" id="inputColorPicker">
+
                     </div>
-                    <canvas id="mainCanvas"></canvas>
-                    
-                    <script src="js/canvas.js"></script>
-                    <script src="js/scriptc.js"></script>
+                    <!-- <img src="img/eraser.jpg" id="eraser"> -->
+                    <img src="cursor.png" id="eraser">
+                    <p id="CLEAR">CLEAR</p>
+                    <p class="rangep">Size:</p>
+                    <input type="range" name="line" id="LineWidth" max="50" min="1" value="10">
+                </div>
+                <canvas id="mainCanvas"></canvas>
+
+                <script src="js/canvas.js"></script>
+                <script src="js/scriptc.js"></script>
             </section>
-            
+
 
 
 
             <footer id="footer" class="footer">
-                <h1>
-                    This website wos made by my and only my :D
-                </h1>
 
+                <!-- Footer -->
+                <div class="kontakt"></div>
+                <footer id="stopka" class="page-footer font-small mdb-color pt-4">
+
+                    <!-- Footer Links -->
+                    <div class="container text-center text-md-left">
+
+                        <!-- Footer links -->
+                        <div class="row text-center text-md-left mt-3 pb-3">
+
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                                <h6 class="text-uppercase mb-4 font-weight-bold">Adam Krówka</h6>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae ullam corporis
+                                    voluptatibus aperiam rem! Reiciendis architecto nesciunt, ipsa quos molestias
+                                    assumenda, eveniet minus asperiores, in itaque tempore vero laboriosam enim!</p>
+                            </div>
+                            <!-- Grid column -->
+
+                            <hr class="w-100 clearfix d-md-none">
+
+                            <!-- Grid column -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                                <h6 class="text-uppercase mb-4 font-weight-bold">Projekty</h6>
+                                <p>
+                                    <a href="#!">Program do rysowania.</a>
+                                </p>
+                                <p>
+                                    <a href="#!">Portfolio</a>
+                                </p>
+                                <p>
+                                    <a href="#!">FirstCanvas</a>
+                                </p>
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <hr class="w-100 clearfix d-md-none">
+
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                                <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+                                <p>
+                                    <a href="#!">JavaScript Tutorial</a>
+                                </p>
+                                <p>
+                                    <a href="#!">JQuery</a>
+                                </p>
+                                <p>
+                                    <a href="#!">Canvas Tutorial</a>
+                                </p>
+                                <p>
+                                    <a href="#!">W3schools</a>
+                                </p>
+                                <p>
+                                    <a href="#!">Bootstrap</a>
+                                </p>
+                            </div>
+
+                            <!-- Grid column -->
+                            <hr class="w-100 clearfix d-md-none">
+
+                            <!-- Grid column -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                                <h6 class="text-uppercase mb-4 font-weight-bold">Kontakt</h6>
+                                <p>
+                                    <i class="fas fa-home mr-3"></i> 00-000 Rzeszów, PL</p>
+                                <p>
+                                    <i class="fas fa-envelope mr-3"></i> adamkrowka108@gmail.com</p>
+                                <p>
+                                    <i class="fas fa-phone mr-3"></i> + 12 234 567 88</p>
+                                <p>
+                                    <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Footer links -->
+
+                        <hr>
+
+                        <!-- Grid row -->
+                        <div class="row d-flex align-items-center">
+
+                            <!-- Grid column -->
+                            <div class="col-md-7 col-lg-8">
+
+                                <!--Copyright-->
+                                <p class="text-center text-md-left">© 2018 Copyright:
+                                    <a href="https://mdbootstrap.com/education/bootstrap/">
+                                        <strong> MDBootstrap.com</strong>
+                                    </a>
+                                </p>
+
+                            </div>
+                            <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+                                <!-- Social buttons -->
+                                <div class="text-center text-md-right">
+                                    <ul class="list-unstyled list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                <i class="fab fa-google-plus-g"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Footer Links -->
+
+                </footer>
+                <!-- Footer -->
             </footer>
         </div>
     </div>
 
     <script src="js/script.js"></script>
     <script src="js/qscript.js"></script>
-    <!-- <script src="js/javaslider.js"></script> -->
 
 </body>
 

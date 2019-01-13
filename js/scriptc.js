@@ -1,26 +1,24 @@
+// var is_touch_device = 'ontouchstart' in document.documentElement;
+// if(is_touch_device){
 
-
-var is_touch_device = 'ontouchstart' in document.documentElement;
-if(is_touch_device){
-
- $("#styleMobilki").attr({href : "css/stylemobile.css"});
- $("#stylePC").attr({href : ""});
-}
-else{
-    $("#styleMobilki").attr({href : ""});
- $("#stylePC").attr({href : "css/style.css"});
-}
+//  $("#styleMobilki").attr({href : "css/stylemobile.css"});
+//  $("#stylePC").attr({href : ""});
+// }
+// else{
+//     $("#styleMobilki").attr({href : ""});
+//  $("#stylePC").attr({href : "css/style.css"});
+// }
 
 
 var clearBtn = document.getElementById("CLEAR");
-clearBtn.onclick = function(){
-c.clearRect(0 , 0 ,canvas.width , canvas.height);
+clearBtn.onclick = function () {
+    c.clearRect(0, 0, canvas.width, canvas.height);
 };
-     
 
 
 
-  var buttonColor = document.getElementById("inputColorPicker");
+
+var buttonColor = document.getElementById("inputColorPicker");
 var eraser = document.getElementById('eraser');
 
 eraser.onclick = function () {

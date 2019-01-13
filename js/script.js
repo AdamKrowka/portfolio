@@ -1,4 +1,3 @@
-var orientation;
 var p1 = document.getElementById("praca1");
 var p2 = document.getElementById("praca2");
 var p3 = document.getElementById("praca3");
